@@ -38,7 +38,7 @@
 
             <div class="col text-center">
 
-                <a id="check-availability-button" href="#!" class="btn btn-success">Check Availability</a>
+                <a id="check-availability-button" href="#" class="btn btn-success">Check Availability</a>
 
             </div>
         </div>
@@ -72,9 +72,13 @@
         </form>
         `;
         attention.custom({
-            title: 'Choose your dates',
             msg: html,
+            title: 'Choose your dates',
+            callback: function (result) {
+               console.log(result);
+            }
         });
     })
 </script>
+
 {{end}}
